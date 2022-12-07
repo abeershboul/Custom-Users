@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+
+
+
+{% block content %}
+
+
+    <img src="{{mov.img_url}}" alt="{{mov.title}}" width="200px" />
+    
+    <h3>Title : {{mov.title}}</h3>
+    
+    <h4>{{mov.purchaser.username}}</h4>
+    <p>Description: {{mov.description}}</p>
+    <button><a href="{% url 'movie_list'%}">Movie list</a></button>
+    
+    
+{% endblock content %}

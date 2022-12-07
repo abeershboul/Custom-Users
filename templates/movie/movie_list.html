@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+<h1>  Movie List</h1>
+
+{% for mov in object_list %}
+
+        <h3>{{mov.title}}</h3>
+        <img src="{{mov.img_url}}" alt="{{mov.title}}" width="200px" />
+        <button><a href="{% url 'movie_detail' mov.id %}">Details</a></button>
+        <button><a href="{% url 'update_movie' mov.id%}">Update</a></button>
+        <button><a href="{% url 'delete_movie' mov.id%}">Delete</a></button>
+        
+      
+    
+{% endfor%}
+
+
+
+{% endblock content %}
